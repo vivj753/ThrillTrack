@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>ThrillTrack</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>login</servlet-name>
+  <servlet-class>Login_package.login_servlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>login</servlet-name>
+  <url-pattern>/Loginserv</url-pattern>
+  </servlet-mapping>
+  
+ 
+  
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>Register_package.register_servlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/reg_servlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>homeServlet</servlet-name>
+    <servlet-class>home_package.home_servlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>homeServlet</servlet-name>
+    <url-pattern>/home_serv</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>profile</servlet-name>
+    <servlet-class>Register_package.profile_update</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>profile</servlet-name>
+    <url-pattern>/profile_update</url-pattern>
+</servlet-mapping>
+
+
+</web-app>

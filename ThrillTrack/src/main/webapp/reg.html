@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="login_res/stylesreg.css">
+  <script>
+    function validateForm() {
+      var name = document.forms["registerForm"]["name"].value;
+      var email = document.forms["registerForm"]["email"].value;
+      var password = document.forms["registerForm"]["password"].value;
+      var password2 = document.forms["registerForm"]["password2"].value;
+      var dob = document.forms["registerForm"]["dob"].value;
+      var phone = document.forms["registerForm"]["phone"].value;
+      var city = document.forms["registerForm"]["city"].value;
+
+      // Password validation
+      var passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+      if (!password.match(passwordRegex)) {
+        alert("Password should be at least 8 characters long, start with a capital letter, contain at least one number, and one special character.");
+        return false;
+      }
+
+      // Email validation
+      var emailRegex = /\S+@\S+\.\S+/;
+      if (!email.match(emailRegex)) {
+        alert("Enter a valid email address.");
+        return false;
+      }
+
+      // Password match validation
+      if (password !== password2) {
+        alert("Passwords do not match.");
+        return false;
+      }
+
+      // Phone number validation
+      var phoneRegex = /^[0-9]+$/;
+      if (!phone.match(phoneRegex)) {
+        alert("Phone number should contain only numbers.");
+        return false;
+      }
+
+      // City validation (no special characters)
+      var cityRegex = /^[a-zA-Z\s]*$/;
+      if (!city.match(cityRegex)) {
+        alert("City should contain only letters and spaces.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div class="main">
+    <div class="navbar">
+      <div class="icon">
+        <h2 class="logo">ThrillTrack</h2>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#">ABOUT</a></li>
+        </ul>
+      </div>
+      
+      <div class="form">
+        <form name="registerForm" action="reg_servlet" method="POST" onsubmit="return validateForm()">
+          <h2>Sign Up</h2>
+          <input type="text" name="name" placeholder="Name">
+          <input type="email" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <input type="password" name="password2" placeholder="Re-enter Password">
+          <input type="date" name="dob" placeholder="Date of Birth">
+          <input type="text" name="phone" placeholder="Phone Number">
+          <input type="text" name="city" placeholder="City">
+        
+          <button class="btnn" type="submit">Register</button>
+        </form>
+        <p class="link">Already have an account? <a href="index.html">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

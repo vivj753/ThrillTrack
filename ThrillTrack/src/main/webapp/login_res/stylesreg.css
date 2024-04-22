@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main{
+    width: 100%;
+    background: url(back.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+  }
+  
+  .navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+  }
+  
+  .icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+  }
+  
+  .logo{
+    color: rgb(100, 17, 2);
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 0px;
+    float: left;
+    padding-top: 10px;
+  }
+  
+  .menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+  }
+  
+  ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+  }
+  
+  ul li a{
+    text-decoration: none;
+    color: white; 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+  }
+  
+  ul li a:hover{
+    color: #ffa500;
+  }
+  
+  
+  
+  .form{
+    width: 280px;
+    height: 580px;
+    background: linear-gradient(to top, rgb(255, 174, 127)50%,rgb(255, 174, 127)50%);
+    position: absolute;
+    top: 20px;
+    left: 800px;
+    border-radius: 10px;
+    padding: 25px;
+  }
+  
+  .form h2{
+    width: 250px;
+    font-family: sans-serif;
+    text-align: center;
+    color: rgb(100, 17, 2);
+    font-size: 22px;
+    border-radius: 10px; 
+  }
+  
+  .form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: rgb(100, 17, 2);
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+  }
+  
+  .form input:foucs{
+    outline: none;
+  }
+  
+  ::placeholder{
+    color: rgb(100, 17, 2);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .btnn{
+    width: 240px;
+    height: 40px;
+    background: rgb(100, 17, 2);
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(255, 174, 127);
+    transition: 0.4s ease;
+  }
+  
+  .btnn:hover{
+    background: rgb(0, 0, 0);
+    color:rgb(255, 174, 127);
+  }
+  .btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    color: rgb(100, 17, 2)  ;
+  }
+  
+  
